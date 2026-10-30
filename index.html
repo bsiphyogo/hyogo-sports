@@ -1,136 +1,311 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="兵庫野球・スポーツ障害予防ネットワーク。アマチュアアスリートのスポーツ障害予防と早期発見に取り組んでいます。">
+<meta name="theme-color" content="#102a46">
 <title>兵庫野球・スポーツ障害予防ネットワーク</title>
+<meta name="description" content="兵庫野球・スポーツ障害予防ネットワーク。年数回のメディカルチェックを通じ、アマチュアアスリートのスポーツ障害予防と早期発見に取り組みます。">
 <style>
-:root{--navy:#17364b;--blue:#416b85;--text:#263642;--gray:#647580;--line:#dce4e8;--pale:#f5f8fa}
+:root{
+--navy:#102a46;
+--deep:#091c31;
+--blue:#2171a7;
+--sky:#b1ddf4;
+--orange:#f2a750;
+--ink:#213448;
+--muted:#617386;
+--line:#dce5ee;
+--bg:#f3f7fb;
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;color:var(--text);background:white;font:15px/1.9 "Yu Gothic",Meiryo,sans-serif}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1060px;margin:auto;padding:0 24px}
-header{border-bottom:1px solid var(--line);background:white}
-.head{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:22px;padding-bottom:22px}
-.brand{font-weight:bold;font-size:17px;line-height:1.5;color:var(--navy)}
-.brand small{display:block;font-size:10px;font-weight:normal;color:var(--gray);letter-spacing:.04em}
-nav{display:flex;gap:18px;flex-wrap:wrap;font-size:12px}
-nav a:hover{color:var(--blue);text-decoration:underline}
-.hero{background:var(--pale);padding:94px 0 100px;border-bottom:1px solid var(--line)}
-.eyebrow{font-size:12px;letter-spacing:.15em;color:var(--blue);font-weight:bold}
-h1{font-size:clamp(29px,4vw,43px);line-height:1.6;color:var(--navy);margin:15px 0 22px}
-.hero p{max-width:760px;font-size:16px;color:#4d606d}
-.btn{display:inline-block;padding:11px 22px;background:var(--navy);color:white;margin:12px 12px 0 0;font-size:13px;font-weight:bold}
-.btn.alt{background:white;color:var(--navy);border:1px solid var(--navy)}
-section{padding:75px 0;border-bottom:1px solid var(--line);scroll-margin-top:30px}
-section:nth-of-type(even){background:#fafbfc}
-h2{font-size:26px;color:var(--navy);margin:0 0 25px;padding-bottom:12px;border-bottom:2px solid var(--navy)}
-h3{font-size:18px;color:var(--navy);margin:0 0 10px}
-.lead{max-width:820px;color:#51616d}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0}
-.card{padding:25px;border:1px solid var(--line);background:white}
-.card p{font-size:14px;color:#5e707a;margin:0}
-.kicker{font:22px Georgia,serif;color:var(--blue)}
-table{border-collapse:collapse;width:100%;margin:26px 0}
-th,td{border-top:1px solid var(--line);padding:16px;text-align:left;vertical-align:top}
-tr:last-child th,tr:last-child td{border-bottom:1px solid var(--line)}
-th{width:170px;background:var(--pale);color:var(--navy)}
-.notice{border:1px solid var(--line);background:var(--pale);padding:24px;margin:22px 0}
-.notice p{margin:8px 0}
-.topic{padding:20px 0;border-bottom:1px solid var(--line)}
-.topic p{margin:0;color:#566772}
-.muted{font-size:13px;color:var(--gray)}
-footer{background:var(--navy);color:white;padding:42px 0}
-footer small{color:#cad9e2;display:block;font-size:12px}
-@media(max-width:760px){.head{display:block}.brand{margin-bottom:14px}nav{gap:10px 16px}.hero{padding:55px 0 60px}.cards{grid-template-columns:1fr}section{padding:50px 0}th{width:108px}th,td{padding:12px;font-size:13px}}
+body{margin:0;font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:var(--ink);line-height:1.85;background:white}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1100px;margin:auto;padding:0 22px}
+header{background:#fff;border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:19px;padding-bottom:19px}
+.brand{font-weight:800;font-size:17px;line-height:1.45;color:var(--navy)}
+.brand small{display:block;font-size:10px;letter-spacing:.04em;font-weight:400;color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:17px;font-size:12px;font-weight:700}
+nav a:hover{color:var(--blue)}
+.hero{background:linear-gradient(130deg,var(--deep),var(--navy) 65%,#20517a);color:white;padding:90px 0 95px}
+.eyebrow{letter-spacing:.12em;color:var(--sky);font-size:12px;font-weight:700}
+.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.45;letter-spacing:.025em;margin:22px 0}
+.hero h1 span{color:var(--sky)}
+.hero p{max-width:780px;color:#e0eaf3;font-size:16px}
+.buttons{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.btn{display:inline-block;padding:15px 27px;border-radius:7px;font-weight:800;font-size:15px;background:var(--orange);color:var(--deep);text-align:center}
+.btn.secondary{background:transparent;color:white;border:1px solid #94b3c8}
+.btn.blue{background:var(--navy);color:white}
+.btn:hover{filter:brightness(1.07)}
+section{padding:74px 0;scroll-margin-top:20px}
+section.alt{background:var(--bg)}
+.section-title{display:flex;align-items:center;gap:15px;margin-bottom:26px}
+.section-title .symbol{display:grid;place-items:center;width:49px;height:49px;border-radius:11px;background:var(--navy);color:white;font-size:24px;flex-shrink:0}
+h2{font-size:clamp(23px,3vw,30px);line-height:1.5;margin:0;color:var(--navy)}
+h3{font-size:18px;margin:0 0 12px;color:var(--navy)}
+p{margin:0 0 17px}
+.lead{max-width:850px;color:#4b6073}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:29px}
+.card{background:white;border:1px solid var(--line);border-radius:12px;padding:27px;box-shadow:0 4px 16px #102a4609}
+.card .number{color:var(--blue);font-size:14px;font-weight:800;letter-spacing:.12em}
+.card p{font-size:14px;color:var(--muted);margin:0}
+.event{background:var(--navy);color:white;border-radius:16px;padding:32px;margin-top:25px}
+.event h3{color:white;font-size:24px}
+.event-intro{color:#c5dbee;font-size:13px;font-weight:700}
+.event-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
+.event-card{background:white;color:var(--ink);border-radius:9px;padding:22px}
+.event-card .label{display:block;font-size:12px;color:var(--blue);font-weight:800;margin-bottom:8px}
+.event-card strong{display:block;font-size:18px;line-height:1.6}
+.event-card p{font-size:13px;color:var(--muted);margin:0}
+.event-note{padding:20px 0 0;color:#dbe8f1;font-size:13px}
+.status{display:inline-block;background:#eaf2f9;border:1px solid #bad0df;border-radius:100px;padding:5px 16px;color:#234d6b;font-size:13px;font-weight:700}
+.topic{padding:24px 0;border-bottom:1px solid var(--line)}
+.topic p{color:var(--muted);font-size:14px}
+.panel{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:27px}
+.privacy p{font-size:14px}
+footer{background:var(--deep);color:white;padding:45px 0}
+footer small{display:block;color:#bdcddd;font-size:11px}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px;margin:22px 0;font-size:12px}
+a:focus-visible{outline:3px solid #ffbf70;outline-offset:4px}
+@media(max-width:760px){
+.header-inner{display:block}
+.brand{font-size:14px;margin-bottom:15px}
+.brand small{font-size:9px}
+nav{gap:10px 17px;font-size:11px}
+.hero{padding:64px 0 69px}
+.hero h1{font-size:36px;line-height:1.45}
+.hero p{font-size:14px}
+.buttons{display:grid;grid-template-columns:1fr}
+.btn{width:100%;padding:17px 18px}
+section{padding:53px 0}
+.section-title{gap:12px}
+.section-title .symbol{width:43px;height:43px;font-size:21px}
+.grid,.event-grid{grid-template-columns:1fr}
+.event{padding:23px 19px}
+.event h3{font-size:21px}
+.event-card{padding:19px}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap head">
-<div class="brand">兵庫野球・スポーツ障害予防ネットワーク
-<small>Baseball &amp; Sports Injury Prevention – Hyogo</small></div>
-<nav aria-label="メインメニュー">
-<a href="#about">団体紹介</a><a href="#activities">検診活動</a><a href="#schedule">次回検診</a><a href="#injuries">スポーツ障害</a><a href="#contact">お問い合わせ</a>
-</nav></div></header>
-<main>
-<div class="hero"><div class="wrap">
+
+<header>
+<div class="wrap header-inner">
+<a class="brand" href="#top">
+兵庫野球・スポーツ障害予防ネットワーク
+<small>Baseball &amp; Sports Injury Prevention – Hyogo</small>
+</a>
+<nav>
+<a href="#about">団体紹介</a>
+<a href="#activities">検診活動</a>
+<a href="#schedule">次回検診</a>
+<a href="#injuries">スポーツ障害</a>
+<a href="#contact">お問い合わせ</a>
+</nav>
+</div>
+</header>
+
+<main id="top">
+
+<div class="hero">
+<div class="wrap">
 <div class="eyebrow">BASEBALL &amp; SPORTS INJURY PREVENTION – HYOGO</div>
-<h1>スポーツ障害の予防と<br>早期発見のために</h1>
+<h1>スポーツ障害の予防と<br><span>早期発見のために。</span></h1>
 <p>兵庫野球・スポーツ障害予防ネットワークは、年に数回のメディカルチェックを実施し、アマチュアアスリートのスポーツ障害の予防と早期発見に取り組んでいます。</p>
-<a class="btn" href="#schedule">次回の検診予定を見る</a>
-<a class="btn alt" href="#activities">活動内容を見る</a>
-</div></div>
-<section id="about"><div class="wrap">
+<div class="buttons">
+<a class="btn" href="#schedule">次回の検診予定を見る →</a>
+<a class="btn secondary" href="#activities">私たちの活動について →</a>
+</div>
+</div>
+</div>
+
+<section id="about">
+<div class="wrap">
+<div class="section-title">
+<span class="symbol" aria-hidden="true">♧</span>
 <h2>団体について</h2>
-<p class="lead">当ネットワークは、野球をはじめとするアマチュアアスリートが、健康に、長く競技を続けられる環境づくりを目指して活動しています。</p>
-<p class="lead">スポーツ障害は、症状が現れる前から身体に変化が生じていることがあります。定期的なメディカルチェックを通じて早期発見につなげ、選手・保護者・指導者への予防啓発に取り組んでいます。</p>
-</div></section>
-<section id="activities"><div class="wrap">
+</div>
+<p class="lead">兵庫野球・スポーツ障害予防ネットワークは、野球をはじめとするアマチュアアスリートが、健康に長く競技を続けられる環境づくりを目指して活動しています。</p>
+<p class="lead">定期的なメディカルチェックを通じてスポーツ障害の兆候を早期に発見し、選手・保護者・指導者への情報提供と障害予防の啓発に取り組んでいます。</p>
+</div>
+</section>
+
+<section class="alt" id="activities">
+<div class="wrap">
+<div class="section-title">
+<span class="symbol" aria-hidden="true">✚</span>
 <h2>メディカルチェック・検診活動</h2>
-<p class="lead">年に数回、アマチュアアスリートを対象としたメディカルチェックを実施しています。検診を通じて身体の状態を確認し、スポーツ障害の早期発見や予防につなげます。</p>
-<div class="cards">
-<article class="card"><div class="kicker">01</div><h3>メディカルチェック</h3><p>身体の状態を確認し、スポーツ障害の兆候を早期に把握することを目指します。</p></article>
-<article class="card"><div class="kicker">02</div><h3>障害予防の情報提供</h3><p>選手や保護者が身体の状態について理解し、必要な受診や予防行動につなげられるよう情報を提供します。</p></article>
-<article class="card"><div class="kicker">03</div><h3>スポーツ障害の啓発</h3><p>競技を継続するうえで大切な、障害の予防と早期発見についての理解を広めます。</p></article>
 </div>
-<p class="muted">※ 検査内容・対象者・実施方法は開催回ごとに異なる場合があります。</p>
-</div></section>
-<section id="schedule"><div class="wrap">
+<p class="lead">年に数回、アマチュアアスリートを対象としたメディカルチェックを実施しています。</p>
+<div class="grid">
+<article class="card">
+<div class="number">01 / CHECK</div>
+<h3>メディカルチェック</h3>
+<p>身体の状態を確認し、スポーツ障害の兆候を早期に把握することを目指します。</p>
+</article>
+<article class="card">
+<div class="number">02 / SUPPORT</div>
+<h3>障害予防の情報提供</h3>
+<p>選手や保護者が身体の状態を理解し、必要な受診や日常の予防行動につなげられるよう支援します。</p>
+</article>
+<article class="card">
+<div class="number">03 / EDUCATION</div>
+<h3>スポーツ障害の啓発</h3>
+<p>選手、保護者、指導者に向けて、障害予防と早期発見の重要性を伝えます。</p>
+</article>
+</div>
+<p style="margin-top:20px;font-size:12px;color:var(--muted)">※ 検査項目や対象者は開催回ごとに異なる場合があります。</p>
+</div>
+</section>
+
+<section id="schedule">
+<div class="wrap">
+<div class="section-title">
+<span class="symbol" aria-hidden="true">▦</span>
 <h2>次回の検診予定</h2>
-<h3>2027年 スポーツ障害予防メディカルチェック</h3>
-<table>
-<tr><th>開催予定日</th><td>2027年3月7日（日）</td></tr>
-<tr><th>会場</th><td>兵庫県立リハビリテーション中央病院</td></tr>
-<tr><th>対象者</th><td>詳細は募集案内にてお知らせします。</td></tr>
-<tr><th>申込方法</th><td>現在、申込受付の準備中です。募集開始後、下記のフォームからお申し込みいただけます。</td></tr>
-</table>
-<div class="notice">
-  <h3>検診参加申込</h3>
-  <p>2027年3月7日（日）開催予定のメディカルチェックです。現在、申込受付の準備中です。</p>
-<!-- <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc8Gr3xPQd3EABy_F6oc5BWK7CGn08kTdqfvPzEw2SLY-50uQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">検診参加申込フォームを開く →</a> -->
-<p class="muted">※ 開催情報は予定です。確定情報はあらためてご案内します。</p>
-</div></section>
-<section id="injuries"><div class="wrap">
-<h2>スポーツ障害について</h2>
-<p class="lead">スポーツ障害の予防には、身体からのサインを見逃さず、早期に適切な対応を取ることが重要です。</p>
-<div class="topic"><h3>野球肘</h3><p>投球などに伴い肘に生じる障害の総称です。成長期には骨や軟骨に負担がかかる場合があり、痛みが軽くても注意が必要です。</p></div>
-<div class="topic"><h3>離断性骨軟骨炎（OCD）</h3><p>関節軟骨やその下の骨に生じる障害です。肘では初期に症状が乏しい場合もあり、早期発見が大切です。</p></div>
-<div class="topic"><h3>野球肩</h3><p>投球に伴う肩の痛みや機能障害の総称です。痛みが続く場合には無理に投球を継続せず、医療機関での評価を検討してください。</p></div>
-<p class="muted">※ 一般的な情報の提供であり、診断や治療に代わるものではありません。</p>
-</div></section>
-<section id="consent"><div class="wrap">
-<h2>同意書・データ利用について</h2>
-<p>検診への参加同意、検診で取得する情報や写真等の利用、研究利用に関する案内は、内容が確定した後に掲載します。</p>
-<p>研究利用に伴うオプトアウト等についても、適用される指針や承認された研究計画に応じて案内します。</p>
-<p class="muted">※ 現在、同意書・オプトアウト申請は準備中です。</p>
-</div></section>
-<section id="contact"><div class="wrap">
-<h2>お問い合わせ</h2>
-<p>検診への参加や団体の活動に関するお問い合わせは、専用フォームから受け付ける予定です。</p>
-<div class="notice">
-  <h3>お問い合わせフォーム</h3>
-  <p>フォームの受付は現在準備中です。</p>
-  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdL5TSsQKi-GY9TJ0cJEudLLIOaLoQMSVKW4vR_1-KartBlYA/viewform?usp=header" target="_blank" rel="noopener noreferrer">お問い合わせフォームを開く →</a>
 </div>
-<p class="muted">診療情報や検診結果などの機微な情報はお問い合わせフォームに入力しないでください。</p>
-</div></section>
-<section id="privacy"><div class="wrap">
-<h2>個人情報の取扱い（掲載準備中）</h2>
-<p>参加申込では、参加選手の氏名・学年・所属、連絡担当者の氏名、メールアドレス、電話番号など、受付と連絡に必要な情報のみ取得する予定です。</p>
-<p>取得した情報は、参加受付、開催案内、当日の受付管理、お問い合わせ対応などの目的に利用する予定です。申込フォームでは検診結果や病歴を収集しません。</p>
-<p>個人情報の保存期間：検診参加申込で取得した個人情報は、原則として検診終了後6か月間保存し、その後適切な方法で削除します。</p>
-  <p>個人情報の管理：取得した個人情報は、団体の管理担当者のみがアクセスできるGoogleフォームおよびスプレッドシートで管理します。</p>
-<p>第三者提供：取得した個人情報は、法令に基づく場合などを除き、本人の同意なく外部団体や第三者に提供しません。</p>
-  <p>個人情報に関するお問い合わせ窓口：兵庫野球・スポーツ障害予防ネットワーク（メール：<a href="mailto:bsip.hyogo@gmail.com">bsip.hyogo@gmail.com</a>）</p>
-<p>個人情報の開示・訂正・削除等をご希望の場合は、上記お問い合わせ窓口までご連絡ください。本人確認を行ったうえで、法令に従い適切に対応します。</p>
-</div></section>
+<p class="lead">次回メディカルチェックの開催予定についてご案内します。</p>
+<div class="event">
+<div class="event-intro">NEXT MEDICAL CHECK</div>
+<h3>2027年 スポーツ障害予防メディカルチェック</h3>
+<div class="event-grid">
+<div class="event-card">
+<span class="label">開催予定日</span>
+<strong>2027年3月7日（日）</strong>
+</div>
+<div class="event-card">
+<span class="label">会場</span>
+<strong>兵庫県立リハビリテーション中央病院</strong>
+</div>
+<div class="event-card">
+<span class="label">対象者</span>
+<strong>募集案内にてお知らせします</strong>
+</div>
+<div class="event-card">
+<span class="label">申込状況</span>
+<span class="status">受付準備中</span>
+<p>募集開始後にご案内します。</p>
+</div>
+</div>
+<p class="event-note">※ 開催情報は予定です。変更がある場合は当サイトでご案内します。</p>
+</div>
+<div class="panel" style="margin-top:23px">
+<h3>検診参加申込</h3>
+<p>オンライン申込フォームは準備中です。募集開始後、こちらに申込ボタンを表示します。</p>
+<!-- 受付開始前のため申込リンクを非表示にしています。
+<a class="btn blue" href="https://docs.google.com/forms/d/e/1FAIpQLSc8Gr3xPQd3EABy_F6oc5BWK7CGn08kTdqfvPzEw2SLY-50uQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">検診参加を申し込む →</a>
+-->
+</div>
+</div>
+</section>
+
+<section class="alt" id="injuries">
+<div class="wrap">
+<div class="section-title">
+<span class="symbol" aria-hidden="true">♡</span>
+<h2>スポーツ障害について</h2>
+</div>
+<p class="lead">スポーツ障害の予防には、身体からのサインを見逃さず、早期に対応することが重要です。</p>
+<div class="topic">
+<h3>野球肘</h3>
+<p>投球動作などに伴って肘に生じる障害の総称です。成長期には骨や軟骨に負担がかかる場合があります。</p>
+</div>
+<div class="topic">
+<h3>離断性骨軟骨炎（OCD）</h3>
+<p>関節軟骨やその下の骨に生じる障害です。肘では初期に症状が目立たない場合があり、早期発見が重要です。</p>
+</div>
+<div class="topic">
+<h3>野球肩</h3>
+<p>投球に伴う肩の痛みや機能障害の総称です。痛みが続く場合は無理に投球を継続せず、医療機関での評価を検討してください。</p>
+</div>
+<p style="font-size:12px;color:var(--muted);margin-top:20px">※ 本ページは一般的な情報提供を目的としており、診断や治療に代わるものではありません。</p>
+</div>
+</section>
+
+<section id="consent">
+<div class="wrap">
+<div class="section-title">
+<span class="symbol" aria-hidden="true">✓</span>
+<h2>同意書・データ利用について</h2>
+</div>
+<p class="lead">検診参加に関する同意書、写真や検診データの利用、研究利用に関する案内は、内容確定後に掲載します。</p>
+<p class="lead">研究利用に伴うオプトアウトについては、対象となる研究の内容や適用される指針に応じてご案内します。</p>
+<div class="panel">現在、正式な同意書とオプトアウトに関する案内は準備中です。</div>
+</div>
+</section>
+
+<section class="alt" id="contact">
+<div class="wrap">
+<div class="section-title">
+<span class="symbol" aria-hidden="true">✉</span>
+<h2>お問い合わせ</h2>
+</div>
+<p class="lead">検診への参加や団体の活動に関するお問い合わせについてご案内します。</p>
+<div class="panel">
+<h3>お問い合わせフォーム</h3>
+<p>フォームの受付は現在準備中です。</p>
+<a class="btn blue" href="https://docs.google.com/forms/d/e/1FAIpQLSdL5TSsQKi-GY9TJ0cJEudLLIOaLoQMSVKW4vR_1-KartBlYA/viewform?usp=header" target="_blank" rel="noopener noreferrer">お問い合わせフォームを開く →</a>
+<p style="font-size:12px;margin-top:17px;color:var(--muted)">※ 受付開始まではフォームを送信できません。健康状態や検診結果は入力しないでください。</p>
+</div>
+</div>
+</section>
+
+<section id="privacy" class="privacy">
+<div class="wrap">
+<div class="section-title">
+<span class="symbol" aria-hidden="true">▣</span>
+<h2>個人情報の取扱い</h2>
+</div>
+<p>兵庫野球・スポーツ障害予防ネットワークでは、検診の参加申込とお問い合わせのため、必要な個人情報を取得します。</p>
+<div class="topic">
+<h3>取得する情報と利用目的</h3>
+<p>参加選手の氏名、学年、所属チーム、連絡担当者の氏名、メールアドレス、電話番号などを、参加受付、開催案内、当日の受付管理のために利用します。お問い合わせで取得する情報は、問い合わせ対応のために使用します。</p>
+<p>申込フォームでは検診結果や病歴は収集しません。</p>
+</div>
+<div class="topic">
+<h3>保存期間</h3>
+<p>検診参加申込で取得した個人情報は、原則として検診終了後6か月間保存し、その後適切な方法で削除します。2027年3月7日の検診については、2027年9月7日を削除期限とします。</p>
+</div>
+<div class="topic">
+<h3>管理方法</h3>
+<p>個人情報はGoogleフォームおよびGoogleスプレッドシートを利用し、団体の管理担当者のみがアクセスできる設定で管理します。保存期間終了後は管理者が手動で削除します。</p>
+</div>
+<div class="topic">
+<h3>第三者提供</h3>
+<p>取得した個人情報は、法令に基づく場合などを除き、本人の同意なく外部団体や第三者に提供しません。</p>
+</div>
+<div class="topic">
+<h3>開示・訂正・削除等</h3>
+<p>個人情報の開示・訂正・削除等をご希望の場合は、下記窓口までご連絡ください。本人確認を行ったうえで、法令に従い適切に対応します。</p>
+</div>
+<div class="topic">
+<h3>お問い合わせ窓口</h3>
+<p>兵庫野球・スポーツ障害予防ネットワーク<br>
+<a href="mailto:bsip.hyogo@gmail.com" style="color:var(--blue);text-decoration:underline">bsip.hyogo@gmail.com</a></p>
+</div>
+</div>
+</section>
+
 </main>
-<footer><div class="wrap">
+
+<footer>
+<div class="wrap">
 <strong>兵庫野球・スポーツ障害予防ネットワーク</strong>
 <small>Baseball &amp; Sports Injury Prevention – Hyogo</small>
-<p class="muted" style="color:#cad9e2">© 2026 Baseball &amp; Sports Injury Prevention – Hyogo</p>
-</div></footer>
+<div class="footer-links">
+<a href="#about">団体紹介</a>
+<a href="#activities">検診活動</a>
+<a href="#schedule">次回検診</a>
+<a href="#injuries">スポーツ障害</a>
+<a href="#contact">お問い合わせ</a>
+<a href="#privacy">個人情報の取扱い</a>
+</div>
+<small>© 2026 Baseball &amp; Sports Injury Prevention – Hyogo</small>
+</div>
+</footer>
 </body>
 </html>
+
