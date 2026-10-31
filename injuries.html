@@ -1,276 +1,134 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#102a46">
-<meta name="description" content="野球肘、肘の離断性骨軟骨炎（OCD）、野球肩について、原因・症状・診断・治療を解説します。">
-<title>スポーツ障害について | 兵庫野球・スポーツ障害予防ネットワーク</title>
+<title>離断性骨軟骨炎（OCD） | 兵庫野球・スポーツ障害予防ネットワーク</title>
+<meta name="description" content="肘の離断性骨軟骨炎（OCD）について、超音波検診、早期発見、画像所見、治療、予防のポイントを解説します。">
 <style>
-:root{
-  --navy:#102a46;
-  --deep:#091c31;
-  --blue:#24618c;
-  --sky:#b1ddf4;
-  --text:#23374a;
-  --muted:#596b7e;
-  --line:#dce5ed;
-  --pale:#f4f7fa;
-}
+:root{--navy:#102a46;--navy2:#0b2e60;--ink:#23374a;--muted:#596b7e;--line:#dbe8f4;--soft:#ecf6fc;--blue:#17649b}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:"Yu Gothic",Meiryo,sans-serif;
-  color:var(--text);
-  line-height:1.85;
-  background:#fff;
-}
+body{margin:0;font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:var(--ink);background:#fff;line-height:1.8}
 a{color:var(--blue)}
-.wrap{max-width:970px;margin:0 auto;padding:0 22px}
-header{padding:18px 0;border-bottom:1px solid var(--line)}
-.brand{
-  color:var(--navy);
-  text-decoration:none;
-  font-weight:800;
-  font-size:15px;
-}
-.brand small{
-  display:block;
-  font-size:10px;
-  color:var(--muted);
-  font-weight:400;
-}
-.hero{
-  background:linear-gradient(125deg,var(--deep),var(--navy) 66%,#23557d);
-  color:white;
-  padding:65px 0;
-}
-.eyebrow{
-  color:var(--sky);
-  font-size:12px;
-  letter-spacing:.12em;
-  font-weight:700;
-}
-.hero h1{
-  font-size:clamp(29px,5vw,45px);
-  line-height:1.5;
-  margin:13px 0;
-}
-.hero p{
-  color:#d8e9f5;
-  max-width:700px;
-  margin:0;
-}
-.jump{
-  background:var(--pale);
-  border-bottom:1px solid var(--line);
-}
-.jump .wrap{
-  display:flex;
-  gap:22px;
-  flex-wrap:wrap;
-  padding-top:14px;
-  padding-bottom:14px;
-}
-.jump a{
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-}
-section{
-  padding:55px 0;
-  border-bottom:1px solid var(--line);
-  scroll-margin-top:24px;
-}
-section:nth-of-type(even){background:#fbfcfd}
-h2{
-  color:var(--navy);
-  font-size:clamp(23px,3vw,30px);
-  margin:0 0 20px;
-}
-h3{
-  color:var(--navy);
-  font-size:17px;
-  margin:0 0 8px;
-}
-.item{
-  padding:20px 0;
-  border-top:1px solid var(--line);
-}
-.item p{margin:0}
-.note{
-  padding:20px 22px;
-  border-radius:9px;
-  background:var(--pale);
-  border-left:4px solid var(--blue);
-  margin-top:20px;
-}
-.note p{margin:0}
-.intro{font-size:16px}
-.back{
-  display:inline-block;
-  margin-top:16px;
-  text-decoration:none;
-  background:var(--navy);
-  color:white;
-  padding:13px 24px;
-  border-radius:8px;
-  font-weight:700;
-}
-footer{
-  background:var(--deep);
-  color:white;
-  padding:35px 0;
-  font-size:13px;
-}
-footer small{
-  display:block;
-  color:#b9cddd;
-}
-footer a{color:#e0edf8}
-@media(max-width:700px){
-  .hero{padding:45px 0}
-  section{padding:37px 0}
-  .jump .wrap{gap:16px}
-  .back{display:block;text-align:center}
+.wrap{width:min(100% - 36px,1050px);margin:auto}
+header{border-bottom:1px solid var(--line);padding:14px 0}
+.brand{text-decoration:none;color:var(--navy);font-weight:800;font-size:15px}
+.brand small{display:block;font-size:10px;font-weight:400;color:var(--muted);line-height:1.3}
+.crumb{font-size:12px;padding:12px 0;color:var(--muted)}
+.crumb a{text-decoration:none}
+.hero{background:#e7f4fc;padding:25px 26px;border-radius:6px;margin-bottom:14px}
+.hero .eyebrow{font-size:15px;font-weight:800;color:var(--navy);margin:0 0 4px}
+.hero h1{margin:0;font-size:clamp(27px,5vw,42px);line-height:1.45;color:var(--navy)}
+main{padding-bottom:48px}
+.panel{border:1px solid var(--line);border-radius:11px;padding:16px 18px;margin-bottom:12px;background:#fff}
+.panel h2{display:flex;align-items:center;gap:12px;margin:0 0 9px;color:var(--navy2);font-size:clamp(19px,2.7vw,25px);line-height:1.4}
+.num{display:inline-grid;place-items:center;background:var(--navy2);color:#fff;border-radius:50%;height:42px;width:42px;min-width:42px;font-size:22px;font-weight:800}
+.panel p{margin:5px 0 10px}
+.two{display:grid;grid-template-columns:1.02fr .98fr;gap:12px}
+.inner{background:var(--soft);border-radius:9px;padding:17px}
+.check{display:grid;grid-template-columns:33px 1fr;gap:12px;align-items:start;margin:0 0 14px}
+.check:last-child{margin-bottom:0}
+.tick{display:grid;place-items:center;background:#0b4e99;color:white;border-radius:50%;height:30px;width:30px;font-size:19px;font-weight:800}
+.figure{display:block;max-width:100%;width:100%;height:auto;object-fit:contain}
+.figure-box{margin:6px 0 9px}
+.xray{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.xray figure{margin:0}
+.xray img{height:185px;object-fit:contain;width:100%;background:#fafafa}
+.xray figcaption{text-align:center;font-weight:700;font-size:12px;color:var(--navy)}
+.note{font-size:13px;color:var(--muted)}
+.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bigfigure{max-width:100%;max-height:340px;display:block;margin:0 auto;object-fit:contain}
+.fullfigure{display:block;max-width:100%;height:auto;max-height:315px;object-fit:contain;margin:0 auto}
+.back{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;padding:11px 18px;border-radius:7px;font-weight:700;margin:15px 0}
+footer{background:var(--navy);color:#fff;padding:24px 0;font-size:12px}
+footer small{display:block;opacity:.8}
+.disclaimer{color:var(--muted);font-size:12px;margin:20px 0}
+@media(max-width:720px){
+.wrap{width:min(100% - 24px,1050px)}
+.panel{padding:15px 12px}
+.two,.bottom-grid{grid-template-columns:1fr}
+.xray{grid-template-columns:repeat(2,minmax(0,1fr))}
+.xray img{height:150px}
+.hero{padding:20px 16px}
+.num{width:36px;min-width:36px;height:36px;font-size:18px}
+.panel h2{gap:9px}
+.inner{padding:14px}
+.brand{font-size:13px}
 }
 </style>
 </head>
-
 <body>
 <header>
-  <div class="wrap">
-    <a class="brand" href="./index.html">
-      兵庫野球・スポーツ障害予防ネットワーク
-      <small>Baseball &amp; Sports Injury Prevention – Hyogo</small>
-    </a>
-  </div>
-</header>
-
-<div class="hero">
-  <div class="wrap">
-    <div class="eyebrow">SPORTS INJURIES</div>
-    <h1>スポーツ障害について</h1>
-    <p>野球肘、肘の離断性骨軟骨炎、野球肩について解説します。</p>
-  </div>
+<div class="wrap">
+<a href="./index.html" class="brand">兵庫野球・スポーツ障害予防ネットワーク
+<small>Baseball &amp; Sports Injury Prevention – Hyogo</small></a>
 </div>
-
-<nav class="jump" aria-label="疾患一覧">
-  <div class="wrap">
-    <a href="#elbow">野球肘</a>
-    <a href="#ocd">肘の離断性骨軟骨炎</a>
-    <a href="#shoulder">野球肩</a>
-  </div>
-</nav>
-
+</header>
+<div class="wrap">
+<div class="crumb"><a href="./index.html">ホーム</a> &gt; スポーツ障害 &gt; 離断性骨軟骨炎（OCD）</div>
+<div class="hero">
+<div class="eyebrow">スポーツ障害</div>
+<h1>離断性骨軟骨炎（OCD）</h1>
+</div>
 <main>
-
-<section id="elbow">
-  <div class="wrap">
-    <h2>野球肘</h2>
-    <p class="intro">
-      野球肘は、投球動作の繰り返しによって肘に生じる障害の総称です。
-      肘の内側・外側・後方など、障害が起こる部位や組織によって病態が異なります。
-    </p>
-
-    <div class="item">
-      <h3>原因</h3>
-      <p>繰り返す投球に伴う牽引、圧迫、衝突などの機械的負荷が関係します。成長期では骨端や成長軟骨などが障害されることがあります。</p>
-    </div>
-
-    <div class="item">
-      <h3>症状</h3>
-      <p>投球中や投球後の肘の痛み、圧痛、曲げ伸ばしの制限などがみられます。病態によっては痛みが目立たない場合もあります。</p>
-    </div>
-
-    <div class="item">
-      <h3>診断</h3>
-      <p>痛みの場所や診察所見を確認し、必要に応じてX線、超音波、MRIなどの画像検査を組み合わせて評価します。</p>
-    </div>
-
-    <div class="item">
-      <h3>治療</h3>
-      <p>障害の種類や重症度により異なります。投球の休止・調整、リハビリテーションなどの保存治療を基本とし、病態によって手術を検討する場合もあります。</p>
-    </div>
-  </div>
+<section class="panel" id="about">
+<h2><span class="num">1</span>どんな病気？</h2>
+<p>離断性骨軟骨炎（OCD）は、成長期に繰り返される投球動作のストレスなどにより、肘の外側の骨（上腕骨小頭）の軟骨とその下の骨（軟骨下骨）に障害が生じる病気です。進行すると、痛みや関節の動きの制限、パフォーマンスの低下を引き起こすことがあります。初期には痛みがないこともあります。</p>
 </section>
-
-<section id="ocd">
-  <div class="wrap">
-    <h2>肘の離断性骨軟骨炎（OCD）</h2>
-    <p class="intro">
-      肘の離断性骨軟骨炎は、主に上腕骨小頭の軟骨と軟骨下骨に生じる障害です。
-      成長期の野球選手などでみられ、早期の段階では自覚症状に乏しいことがあります。
-    </p>
-
-    <div class="item">
-      <h3>原因</h3>
-      <p>発症には、繰り返す投球による肘外側の圧迫負荷や局所の血流など、複数の要因が関係すると考えられています。</p>
-    </div>
-
-    <div class="item">
-      <h3>症状</h3>
-      <p>初期は無症状のこともあります。進行すると肘外側の痛み、関節可動域の制限、引っかかり感、ロッキングなどを認める場合があります。</p>
-    </div>
-
-    <div class="item">
-      <h3>診断</h3>
-      <p>超音波検査はスクリーニングに役立ちます。病変の広がりや安定性などを評価するため、X線、MRI、CTなどが用いられます。</p>
-    </div>
-
-    <div class="item">
-      <h3>治療</h3>
-      <p>病期、病変の安定性、骨の成熟度などに応じて判断します。早期の安定した病変では投球休止などの保存治療が選択されることがあり、不安定な病変などでは手術治療が検討されます。</p>
-    </div>
-  </div>
+<div class="two">
+<section class="panel" id="screen">
+<h2><span class="num">2</span>検診でわかること</h2>
+<p>検診では、<strong>放射線被ばくのないエコー（超音波）</strong>で肘の状態を評価できます。身体への侵襲が少なく、早期発見に役立ちます。</p>
+<div class="figure-box"><img class="figure" src="./ocd_ultrasound.jpg" alt="正常とOCDの超音波画像を比較した図"></div>
+<p class="note">異常が疑われた場合は、専門医による診察や追加の画像検査が必要です。</p>
 </section>
-
-<section id="shoulder">
-  <div class="wrap">
-    <h2>野球肩</h2>
-    <p class="intro">
-      野球肩は、投球動作に関連する肩の痛みや機能障害の総称です。
-      障害される組織は年齢や競技歴などにより異なります。
-    </p>
-
-    <div class="item">
-      <h3>原因</h3>
-      <p>繰り返す投球による負荷が関係します。成長期には上腕骨近位骨端線への負荷が問題となることがあり、いわゆるリトルリーグ肩（上腕骨近位骨端線障害）が代表例です。</p>
-    </div>
-
-    <div class="item">
-      <h3>症状</h3>
-      <p>投球時の肩の痛み、投球後の違和感、肩の動かしにくさ、投球能力の低下などがみられます。</p>
-    </div>
-
-    <div class="item">
-      <h3>診断</h3>
-      <p>症状や身体所見を確認し、疑われる病態に応じてX線、超音波、MRIなどを利用します。</p>
-    </div>
-
-    <div class="item">
-      <h3>治療</h3>
-      <p>原因となる病態に合わせて投球負荷の調整、リハビリテーションなどを行います。投球再開は症状や診察所見、回復状況を踏まえて判断します。</p>
-    </div>
-
-    <div class="note">
-      <p>※ ここに記載した内容は一般的な疾患解説であり、個別の診断や治療方針を示すものではありません。</p>
-    </div>
-
-    <a class="back" href="./index.html">トップページに戻る →</a>
-  </div>
+<section class="panel" id="benefit">
+<h2><span class="num">3</span>早期発見のメリット</h2>
+<div class="inner">
+<div class="check"><span class="tick">✓</span><span>早期に発見することで、投球制限やリハビリなどの<strong>保存療法を選択できる可能性が高まります</strong>。</span></div>
+<div class="check"><span class="tick">✓</span><span>病期や病変の状態によっては、手術を回避できる場合があります。</span></div>
+<div class="check"><span class="tick">✓</span><span>重症化を防ぎ、競技への復帰につながる可能性があります。</span></div>
+</div>
 </section>
-
+</div>
+<section class="panel" id="images">
+<h2><span class="num">4</span>画像でみる進行例</h2>
+<div class="xray">
+<figure><img src="./ocd_xray_1.jpg" alt="初期のX線像" loading="lazy"><figcaption>初期の所見例</figcaption></figure>
+<figure><img src="./ocd_xray_2.jpg" alt="進行例のX線像" loading="lazy"><figcaption>進行例</figcaption></figure>
+<figure><img src="./ocd_xray_3.jpg" alt="進行例のX線像" loading="lazy"><figcaption>進行例</figcaption></figure>
+<figure><img src="./ocd_ct.jpg" alt="3D CTでみたOCD病変" loading="lazy"><figcaption>3D CTでみた病変</figcaption></figure>
+</div>
+<p>OCDは進行するにつれて、X線やCTなどの画像で骨や関節面の異常がより明確になることがあります。進行した病変では、関節に深刻な障害を生じる可能性があります。</p>
+</section>
+<div class="bottom-grid">
+<section class="panel" id="progression">
+<h2><span class="num">5</span>進行するとどうなる？</h2>
+<img class="bigfigure" src="./ocd_progression.jpg" alt="OCDの進行と関節変形を示したCT画像" loading="lazy">
+<p>進行すると、関節内に遊離体（はがれた軟骨のかけら）が生じたり、関節の変形が進行することがあります。重症例では、変形性関節症に至る可能性があります。</p>
+</section>
+<section class="panel" id="treatment">
+<h2><span class="num">6</span>治療</h2>
+<img class="bigfigure" src="./ocd_treatment.jpg" alt="関節鏡手術と骨軟骨柱移植の説明画像" loading="lazy">
+<p>早期で安定した病変では投球休止・制限などの保存療法が選択されます。病変の進行度に応じて、関節鏡を用いた遊離体摘出や骨軟骨柱移植などが検討されます。</p>
+</section>
+</div>
+<section class="panel" id="prevention">
+<h2><span class="num">7</span>予防につながるポイント</h2>
+<div class="two">
+<div><img class="fullfigure" src="./ocd_rom.jpg" alt="肩の可動域評価を示す写真" loading="lazy"></div>
+<div class="inner">
+<p>肩の可動域制限や全身の関節可動域の低下は、肘への負荷やOCDと関連する可能性があります。</p>
+<p>肩や全身の柔軟性・可動域の評価と、必要に応じたストレッチやコンディショニングは予防に向けた取り組みとなります。ただし、これらの介入によるOCD発症予防効果が確立されているわけではありません。</p>
+</div>
+</div>
+</section>
+<p class="disclaimer">※ 本ページは一般的な疾患解説です。検診の超音波検査だけで診断を確定するものではありません。症状や異常がある場合には専門医へご相談ください。</p>
+<a class="back" href="./index.html">トップページに戻る →</a>
 </main>
-
-<footer>
-  <div class="wrap">
-    <strong>兵庫野球・スポーツ障害予防ネットワーク</strong>
-    <small>Baseball &amp; Sports Injury Prevention – Hyogo</small>
-  </div>
-</footer>
-
+</div>
+<footer><div class="wrap"><strong>兵庫野球・スポーツ障害予防ネットワーク</strong><small>Baseball &amp; Sports Injury Prevention – Hyogo</small></div></footer>
 </body>
 </html>
