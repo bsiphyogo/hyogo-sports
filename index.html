@@ -88,6 +88,14 @@ section{padding:53px 0}
 .event h3{font-size:21px}
 .event-card{padding:19px}
 }
+.card-photo {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 22px;
+}
 </style>
 </head>
 <body>
@@ -141,21 +149,28 @@ section{padding:53px 0}
 </div>
 <p class="lead">年に数回、アマチュアアスリートを対象としたメディカルチェックを実施しています。</p>
 <div class="grid">
+
 <article class="card">
-<div class="number">01 / CHECK</div>
-<h3>メディカルチェック</h3>
-<p>身体の状態を確認し、スポーツ障害の兆候を早期に把握することを目指します。</p>
+  <img src="./echo.jpg" alt="超音波検査によるメディカルチェック" class="card-photo">
+  <div class="number">01 / CHECK</div>
+  <h3>メディカルチェック</h3>
+  <p>身体の状態を確認し、スポーツ障害の兆候を早期に把握することを目指します。</p>
 </article>
+
 <article class="card">
-<div class="number">02 / SUPPORT</div>
-<h3>障害予防の情報提供</h3>
-<p>選手や保護者が身体の状態を理解し、必要な受診や日常の予防行動につなげられるよう支援します。</p>
+  <img src="./Hospital.jpg" alt="医療機関の外観" class="card-photo">
+  <div class="number">02 / SUPPORT</div>
+  <h3>医療機関への連携</h3>
+  <p>メディカルチェックで得られた情報をもとに、必要に応じて適切な医療機関へつなぎ、継続的な診療や治療を支援します。</p>
 </article>
+
 <article class="card">
-<div class="number">03 / EDUCATION</div>
-<h3>スポーツ障害の啓発</h3>
-<p>選手、保護者、指導者に向けて、障害予防と早期発見の重要性を伝えます。</p>
+  <img src="./reserch.jpg" alt="スポーツ医学・バイオメカニクスの研究発表" class="card-photo">
+  <div class="number">03 / RESEARCH</div>
+  <h3>新たな知見を創出する研究活動</h3>
+  <p>メディカルチェックなどで得られたデータを適切な同意や倫理的手続きのもとで活用し、スポーツ障害の予防・早期発見につながる新たな知見の創出を目指します。</p>
 </article>
+
 </div>
 <p style="margin-top:20px;font-size:12px;color:var(--muted)">※ 検査項目や対象者は開催回ごとに異なる場合があります。</p>
 </div>
