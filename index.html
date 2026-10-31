@@ -186,6 +186,87 @@ section{padding:53px 0}
     font-size: 11px;
   }
 }
+
+/* スマホ版：縦の長さをコンパクトにする */
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 28px 0 32px !important;
+  }
+
+  .hero h1 {
+    margin: 12px 0 14px !important;
+    line-height: 1.4 !important;
+  }
+
+  .hero p {
+    line-height: 1.65 !important;
+  }
+
+  .hero .buttons {
+    margin-top: 16px !important;
+    gap: 8px !important;
+  }
+
+  .hero .btn {
+    min-height: 42px !important;
+    padding: 10px 13px !important;
+  }
+
+  section {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .section-title {
+    margin-bottom: 16px !important;
+  }
+
+  #activities .grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  #activities .card {
+    display: grid !important;
+    grid-template-columns: 100px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    align-content: center !important;
+    padding: 12px !important;
+  }
+
+  #activities .card .card-photo {
+    grid-column: 1 !important;
+    grid-row: 1 / span 3 !important;
+    width: 100% !important;
+    height: 100px !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+    margin: 0 !important;
+  }
+
+  #activities .card .number,
+  #activities .card h3,
+  #activities .card p {
+    grid-column: 2 !important;
+    margin-top: 0 !important;
+    margin-bottom: 4px !important;
+  }
+
+  #activities .card .number {
+    font-size: 11px !important;
+  }
+
+  #activities .card h3 {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+
+  #activities .card p {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+  }
+}
   
 </style>
 </head>
