@@ -267,6 +267,90 @@ section{padding:53px 0}
     line-height: 1.6 !important;
   }
 }
+
+/* スマホ版：次回検診をコンパクトに表示 */
+@media screen and (max-width: 600px) {
+  #schedule .event {
+    padding: 17px 13px !important;
+    margin-top: 12px !important;
+    border-radius: 10px !important;
+  }
+
+  #schedule .event-intro {
+    font-size: 10px !important;
+  }
+
+  #schedule .event h3 {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    margin: 5px 0 0 !important;
+  }
+
+  #schedule .event-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 7px !important;
+    margin-top: 13px !important;
+  }
+
+  #schedule .event-card {
+    display: grid !important;
+    grid-template-columns: 65px minmax(0, 1fr);
+    align-items: center;
+    gap: 2px 9px;
+    padding: 9px 11px !important;
+    border-radius: 6px !important;
+  }
+
+  #schedule .event-card .label {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    font-size: 11px !important;
+    margin: 0 !important;
+  }
+
+  #schedule .event-card strong {
+    grid-column: 2;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  #schedule .event-card .status {
+    grid-column: 2;
+    justify-self: start;
+    padding: 3px 10px !important;
+    font-size: 11px !important;
+  }
+
+  #schedule .event-card p {
+    grid-column: 2;
+    font-size: 11px !important;
+    margin: 0 !important;
+  }
+
+  #schedule .event-note {
+    padding-top: 10px !important;
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #schedule .panel {
+    padding: 14px !important;
+    margin-top: 10px !important;
+  }
+
+  #schedule .panel h3 {
+    font-size: 15px !important;
+    margin-bottom: 5px !important;
+  }
+
+  #schedule .panel p {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+  }
+}
   
 </style>
 </head>
