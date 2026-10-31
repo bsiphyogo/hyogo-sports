@@ -149,6 +149,44 @@ section{padding:53px 0}
     font-size: 11px !important;
   }
 }
+
+/* スマートフォン版：全体の文字サイズを調整 */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .brand { font-size: 14px; }
+  .brand small { font-size: 9px; }
+
+  nav, nav a { font-size: 10px !important; }
+
+  .hero h1 {
+    font-size: 24px !important;
+    line-height: 1.45 !important;
+  }
+
+  .hero .eyebrow { font-size: 9px !important; }
+  .hero p { font-size: 12px !important; }
+
+  h2, .section-title h2 { font-size: 21px !important; }
+  h3, .card h3, .event h3 { font-size: 17px !important; }
+
+  p, .lead, .topic p, .card p, .event p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .btn, .hero .btn, .hero .buttons .btn {
+    font-size: 12px !important;
+  }
+
+  small, .note {
+    font-size: 11px;
+  }
+}
+  
 </style>
 </head>
 <body>
