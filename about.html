@@ -372,13 +372,33 @@ section{padding:53px 0}
  body.has-site-nav header nav{display:none}
 }
 
+
+/* SITE-NAV-V3: navy sidebar and subordinate OCD link */
+@media(min-width:901px){
+ .site-sidebar{background:#102a46;border-right:1px solid #284b6c}
+ .site-sidebar .site-menu-name{color:#fff}
+ .site-sidebar .site-menu-label{color:#a9c6de}
+ .site-sidebar a{color:#e4eef6}
+ .site-sidebar a:hover{background:#264d70;color:#fff}
+ .site-sidebar a[aria-current="page"]{background:#dcebf6;color:#102a46}
+ .site-sidebar a.site-subnav{padding-left:28px;font-size:11px;color:#b8d3e8;position:relative}
+ .site-sidebar a.site-subnav::before{content:"└";position:absolute;left:12px;color:#87adcb}
+ .site-sidebar a.site-subnav[aria-current="page"]{color:#102a46}
+ .site-sidebar a.site-parent-active{background:#264d70;color:#fff;font-weight:800}
+}
+@media(max-width:900px){
+ .site-mobile-menu .site-mobile-links a.site-subnav{padding-left:34px;font-size:12px;color:#486984;background:#f2f6fa}
+ .site-mobile-menu .site-mobile-links a.site-subnav::before{content:"└ ";color:#6386a3}
+ .site-mobile-menu .site-mobile-links a.site-subnav[aria-current="page"]{background:#dcebf6;color:#102a46}
+}
+
 </style></head><body class="has-site-nav">
 <aside class="site-sidebar" aria-label="サイトメニュー"><div class="site-menu-name">兵庫野球・スポーツ<br>障害予防ネットワーク</div><div class="site-menu-label">MENU</div><a href="./index.html">ホーム</a>
 <a href="./about.html" aria-current="page">団体紹介</a>
 <a href="./activities.html">活動紹介</a>
 <a href="./screening.html">次回検診</a>
 <a href="./sports.html">スポーツ障害</a>
-<a href="./injuries.html">OCDの詳細</a>
+<a href="./injuries.html" class="site-subnav">離断性骨軟骨炎（OCD）</a>
 <a href="./consent.html">同意書・データ利用</a>
 <a href="./contact.html">お問い合わせ</a>
 <a href="./privacy.html">個人情報保護方針</a>
@@ -388,7 +408,7 @@ section{padding:53px 0}
 <a href="./activities.html">活動紹介</a>
 <a href="./screening.html">次回検診</a>
 <a href="./sports.html">スポーツ障害</a>
-<a href="./injuries.html">OCDの詳細</a>
+<a href="./injuries.html" class="site-subnav">離断性骨軟骨炎（OCD）</a>
 <a href="./consent.html">同意書・データ利用</a>
 <a href="./contact.html">お問い合わせ</a>
 <a href="./privacy.html">個人情報保護方針</a>
