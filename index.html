@@ -352,9 +352,59 @@ section{padding:53px 0}
   }
 }
   
+
+.site-summary-images{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 22px}.site-summary-images img{width:100%;height:150px;object-fit:cover;border-radius:8px}.site-brief-event{background:#102a46;color:#fff;border-radius:12px;padding:20px;margin:12px 0}.site-brief-event h3{color:#fff;margin:5px 0;font-size:22px}.site-brief-event p{margin:0 0 12px}.site-ocd-btn{background:#fff!important;color:#102a46!important;border:1px solid #102a46!important}
+@media(max-width:600px){.site-summary-images img{height:85px}.site-summary-images{gap:7px}.site-brief-event{padding:16px}.site-brief-event h3{font-size:18px}}
+
+/* SITE-NAV-V2: shared responsive navigation */
+@media(min-width:901px){
+ body.has-site-nav{padding-left:220px}
+ .site-sidebar{width:220px;position:fixed;inset:0 auto 0 0;z-index:990;background:#f3f7fb;border-right:1px solid #dbe5ed;overflow-y:auto;padding:25px 13px 20px}
+ .site-mobile-menu{display:none}
+ .site-sidebar .site-menu-name{font:800 12px/1.65 "Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:#102a46;margin:0 6px 22px}
+ .site-sidebar .site-menu-label{font-size:10px;color:#607489;letter-spacing:.12em;margin:12px 8px}
+ .site-sidebar a{display:block;padding:10px 11px;margin:2px 0;border-radius:6px;color:#26405b;font-size:12px;text-decoration:none;line-height:1.5}
+ .site-sidebar a:hover,.site-sidebar a[aria-current="page"]{background:#dcebf6;color:#102a46;font-weight:800}
+ body.has-site-nav header nav{display:none}
+}
+@media(max-width:900px){
+ body.has-site-nav{padding-top:49px}
+ .site-sidebar{display:none}
+ .site-mobile-menu{position:fixed;z-index:999;top:0;left:0;right:0;background:#102a46;color:white;font:500 13px/1.5 "Noto Sans JP","Yu Gothic",Meiryo,sans-serif}
+ .site-mobile-menu summary{cursor:pointer;list-style:none;padding:14px 18px;min-height:49px;display:flex;justify-content:space-between;align-items:center}
+ .site-mobile-menu summary::-webkit-details-marker{display:none}
+ .site-mobile-menu summary:after{content:"☰  メニュー";font-size:12px}
+ .site-mobile-menu[open] summary:after{content:"×  閉じる"}
+ .site-mobile-menu .site-mobile-links{background:#fff;max-height:calc(100vh - 49px);overflow:auto;box-shadow:0 8px 20px #102a4628;padding:8px 14px}
+ .site-mobile-menu a{display:block;padding:12px;border-bottom:1px solid #edf1f5;color:#102a46;text-decoration:none;font-size:13px}
+ .site-mobile-menu a[aria-current="page"]{background:#edf5fb;font-weight:800}
+ body.has-site-nav header nav{display:none}
+}
+
 </style>
 </head>
-<body>
+<body class="has-site-nav">
+<aside class="site-sidebar" aria-label="サイトメニュー"><div class="site-menu-name">兵庫野球・スポーツ<br>障害予防ネットワーク</div><div class="site-menu-label">MENU</div><a href="./index.html" aria-current="page">ホーム</a>
+<a href="./about.html">団体紹介</a>
+<a href="./activities.html">活動紹介</a>
+<a href="./screening.html">次回検診</a>
+<a href="./sports.html">スポーツ障害</a>
+<a href="./injuries.html">OCDの詳細</a>
+<a href="./consent.html">同意書・データ利用</a>
+<a href="./contact.html">お問い合わせ</a>
+<a href="./privacy.html">個人情報保護方針</a>
+<a href="./optout.html">研究情報公開</a></aside>
+<details class="site-mobile-menu"><summary>兵庫野球・スポーツ障害予防ネットワーク</summary><nav class="site-mobile-links" aria-label="スマートフォンメニュー"><a href="./index.html" aria-current="page">ホーム</a>
+<a href="./about.html">団体紹介</a>
+<a href="./activities.html">活動紹介</a>
+<a href="./screening.html">次回検診</a>
+<a href="./sports.html">スポーツ障害</a>
+<a href="./injuries.html">OCDの詳細</a>
+<a href="./consent.html">同意書・データ利用</a>
+<a href="./contact.html">お問い合わせ</a>
+<a href="./privacy.html">個人情報保護方針</a>
+<a href="./optout.html">研究情報公開</a></nav></details>
+
 
 <header>
 <div class="wrap header-inner">
@@ -386,125 +436,14 @@ section{padding:53px 0}
 </div>
 </div>
 
-<section id="about">
-<div class="wrap">
-<div class="section-title">
-<span class="symbol" aria-hidden="true">♧</span>
-<h2>団体について</h2>
-</div>
-<p class="lead">兵庫野球・スポーツ障害予防ネットワークは、野球をはじめとするアマチュアアスリートが、健康に長く競技を続けられる環境づくりを目指して活動しています。</p>
-<p class="lead">定期的なメディカルチェックを通じてスポーツ障害の兆候を早期に発見し、選手・保護者・指導者への情報提供と障害予防の啓発に取り組んでいます。</p>
-</div>
-</section>
+<section id="about"><div class="wrap"><div class="section-title"><span class="symbol" aria-hidden="true">♧</span><h2>団体について</h2></div><p class="lead">野球をはじめとするアマチュアアスリートが、健康に長く競技を続けられる環境づくりを目指しています。</p><a class="btn blue" href="./about.html">団体紹介を見る →</a></div></section>
 
-<section class="alt" id="activities">
-<div class="wrap">
-<div class="section-title">
-<span class="symbol" aria-hidden="true">✚</span>
-<h2>メディカルチェック・検診活動</h2>
-</div>
-<p class="lead">年に数回、アマチュアアスリートを対象としたメディカルチェックを実施しています。</p>
-<div class="grid">
+<section class="alt" id="activities"><div class="wrap"><div class="section-title"><span class="symbol" aria-hidden="true">✚</span><h2>メディカルチェック・検診活動</h2></div><p class="lead">メディカルチェック、医療機関への連携、スポーツ障害予防に関する研究に取り組んでいます。</p><div class="site-summary-images"><img src="./echo.jpg" alt="メディカルチェック"><img src="./Hospital.jpg" alt="医療機関への連携"><img src="./reserch.jpg" alt="研究活動"></div><a class="btn blue" href="./activities.html">活動紹介を見る →</a></div></section>
 
-<article class="card">
-  <img src="./echo.jpg" alt="超音波検査によるメディカルチェック" class="card-photo">
-  <div class="number">01 / CHECK</div>
-  <h3>メディカルチェック</h3>
-  <p>身体の状態を確認し、スポーツ障害の兆候を早期に把握することを目指します。</p>
-</article>
-
-<article class="card">
-  <img src="./Hospital.jpg" alt="医療機関の外観" class="card-photo">
-  <div class="number">02 / SUPPORT</div>
-  <h3>医療機関への連携</h3>
-  <p>メディカルチェックで得られた情報をもとに、必要に応じて適切な医療機関へつなぎ、継続的な診療や治療を支援します。</p>
-</article>
-
-<article class="card">
-  <img src="./reserch.jpg" alt="スポーツ医学・バイオメカニクスの研究発表" class="card-photo">
-  <div class="number">03 / RESEARCH</div>
-  <h3>新たな知見を創出する研究活動</h3>
-  <p>メディカルチェックなどで得られたデータを適切な同意や倫理的手続きのもとで活用し、スポーツ障害の予防・早期発見につながる新たな知見の創出を目指します。</p>
-</article>
-
-</div>
-<p style="margin-top:20px;font-size:12px;color:var(--muted)">※ 検査項目や対象者は開催回ごとに異なる場合があります。</p>
-</div>
-</section>
-
-<section id="schedule">
-<div class="wrap">
-<div class="section-title">
-<span class="symbol" aria-hidden="true">▦</span>
-<h2>次回の検診予定</h2>
-</div>
-<p class="lead">次回メディカルチェックの開催予定についてご案内します。</p>
-<div class="event">
-<div class="event-intro">NEXT MEDICAL CHECK</div>
-<h3>2027年 スポーツ障害予防メディカルチェック</h3>
-<div class="event-grid">
-<div class="event-card">
-<span class="label">開催予定日</span>
-<strong>2027年3月7日（日）</strong>
-</div>
-<div class="event-card">
-<span class="label">会場</span>
-<strong>兵庫県立リハビリテーション中央病院</strong>
-</div>
-<div class="event-card">
-<span class="label">対象者</span>
-<strong>募集案内にてお知らせします</strong>
-</div>
-<div class="event-card">
-<span class="label">申込状況</span>
-<span class="status">受付準備中</span>
-<p>募集開始後にご案内します。</p>
-</div>
-</div>
-<p class="event-note">※ 開催情報は予定です。変更がある場合は当サイトでご案内します。</p>
-</div>
-<div class="panel" style="margin-top:23px">
-<h3>検診参加申込</h3>
-<p>オンライン申込フォームは準備中です。募集開始後、こちらに申込ボタンを表示します。</p>
-<!-- 受付開始前のため申込リンクを非表示にしています。
-<a class="btn blue" href="https://docs.google.com/forms/d/e/1FAIpQLSc8Gr3xPQd3EABy_F6oc5BWK7CGn08kTdqfvPzEw2SLY-50uQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">検診参加を申し込む →</a>
--->
-</div>
-</div>
-</section>
+<section id="schedule"><div class="wrap"><div class="section-title"><span class="symbol" aria-hidden="true">▦</span><h2>次回の検診予定</h2></div><div class="site-brief-event"><div class="event-intro">NEXT MEDICAL CHECK</div><h3>2027年3月7日（日）</h3><p>兵庫県立リハビリテーション中央病院</p><span class="status">受付準備中</span></div><p><a class="btn blue" href="./screening.html">検診案内を見る →</a></p></div></section>
 
 
-<section class="alt" id="injuries">
-  <div class="wrap">
-    <div class="section-title">
-      <span class="symbol" aria-hidden="true">♡</span>
-      <h2>スポーツ障害について</h2>
-    </div>
-
-    <p class="lead">スポーツ障害の予防には、身体からのサインを見逃さず、早期に適切な対応を取ることが重要です。</p>
-
-    <div class="topic">
-      <h3>野球肘とは？</h3>
-      <p>野球肘とは、投球動作に伴って肘に生じる障害の総称です。障害が生じる部位によって、内側型・外側型・後方型に分類されます。</p>
-      <img src="./baseball_elbow_types.jpg" alt="野球肘の種類：内側型・外側型・後方型" style="display:block;width:100%;max-width:900px;height:auto;margin:22px auto;border-radius:8px;">
-    </div>
-
-    <div class="topic">
-      <h3>野球肘の原因と予防</h3>
-      <p>野球肘には、成長期の骨や軟骨の特性に加え、投球数・練習時間、投球フォーム、肩や全身の関節可動域、筋力、コンディションなど、さまざまな要因が関係します。</p>
-      <p>投球数や練習時間を適切に管理し、肩のストレッチや全身のコンディショニングを行うことが、障害予防に向けた重要な取り組みです。</p>
-    </div>
-
-    <div class="topic">
-      <h3>注意すべき野球肘：離断性骨軟骨炎（OCD）</h3>
-      <p>離断性骨軟骨炎（OCD）は、肘の外側に生じる骨軟骨の障害です。初期には痛みがない場合もありますが、早期発見により保存療法を選択できる可能性が高まります。放射線被ばくのない超音波検査（エコー）は、早期発見に役立ちます。</p>
-    </div>
-
-    <p style="font-size:12px;color:var(--muted);margin-top:20px;">※ 本ページは一般的な情報提供を目的としており、診断や治療に代わるものではありません。</p>
-
-    <p><a class="btn blue" href="./injuries.html">離断性骨軟骨炎（OCD）の詳細を見る →</a></p>
-  </div>
-</section>
+<section class="alt" id="injuries"><div class="wrap"><div class="section-title"><span class="symbol" aria-hidden="true">♡</span><h2>スポーツ障害について</h2></div><p class="lead">野球肘は投球動作によって肘に生じる障害の総称です。原因と予防、早期発見の重要性をご紹介します。</p><p><a class="btn blue" href="./sports.html">野球肘について見る →</a> <a class="btn secondary site-ocd-btn" href="./injuries.html">OCDの詳細を見る →</a></p></div></section>
   
 <section id="consent">
   <div class="wrap">
